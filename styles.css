@@ -1,42 +1,42 @@
-.container {
+
+*{
+  border: solid 2px red
+}
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+  .container{
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: space-around;
-}
+  height:100%;
+  }
 
 /*---------left Side Box---------*/
 .left-side-box{
   display: flex;
   justify-content: space-around;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
   height:100%;
   width:30%;
+  background-image: linear-gradient(grey, blue);
 }
 /*---------Main box--------------*/
 .main-box{
   display: flex;
   justify-content: space-around;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
   height:100%;
   width:60%
 }
 /*---------Right Side Box---------*/
 .right-side-box{
-  display: block;
+  display: flex;
   justify-content: space-around;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
   height:100%;
   width: 30%;
+  background-image: linear-gradient(grey, blue);
 }
