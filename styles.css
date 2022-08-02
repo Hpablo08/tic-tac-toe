@@ -1,37 +1,42 @@
 .container {
-  display:inline-flex;
+  display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: normal;
-  align-items: normal;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
 }
 
 /*---------left Side Box---------*/
 .left-side-box{
-  display: block;
+  display: flex;
+  justify-content: space-around;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   align-self: auto;
-  
+  height:100%;
+  width:30%;
 }
 /*---------Main box--------------*/
 .main-box{
-  display: block;
+  display: flex;
+  justify-content: space-around;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   align-self: auto;
-
+  height:100%;
+  width:60%
 }
-
 /*---------Right Side Box---------*/
 .right-side-box{
   display: block;
+  justify-content: space-around;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   align-self: auto;
-
+  height:100%;
+  width: 30%;
 }
