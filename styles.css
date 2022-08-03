@@ -1,6 +1,6 @@
-*{
+/*{
   border: solid 2px red
-}
+}*/
 
 html, body , .container {
   height: 100%;
@@ -22,7 +22,7 @@ html, body , .container {
   justify-content: space-around;
   height:100%;
   width:30%;
-  background-image: linear-gradient(grey, blue);
+  background-image: linear-gradient(grey, black);
 }
 /*---------Main box--------------*/
 .main-box{
@@ -31,6 +31,7 @@ html, body , .container {
   height:100%;
   width:60%;
   }
+
 
 h1{
   display: flex;
@@ -41,10 +42,16 @@ h1{
 td {
   width: 100px;
   height: 100px;
+  background-color: black;
+	border: 1px solid white;
+	font-size:80px;
+	color:#ffffff;
+	border-radius: 8px 8px 8px 8px;
+  text-align: center;
 }
+
 table {
   border
   margin: 5px auto;
   display: grid;
-
 }
