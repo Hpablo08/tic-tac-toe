@@ -24,11 +24,11 @@ function addPiece(event){
   console.log(game.player1Turn)
   if (game.player1Turn === true){
   event.target.innerText = 'X'
-  player1.moves.push(event.target.dataset.section)
+  player1.moves.push(parseInt(event.target.dataset.section))
   console.log(player1.moves)
 } else {
   event.target.innerText = 'O'
-  player2.moves.push(event.target.dataset.section)
+  player2.moves.push(parseInt(event.target.dataset.section))
   console.log(player2.moves)
 }
 }

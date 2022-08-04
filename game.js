@@ -24,8 +24,12 @@ class Game {
       //this.player2
       console.log('ptwoooooo')
     }
+    if (this.turn >= 4){
+      this.checkWin()
+    }
   }
-  checkWin(){
+  checkWin(moves){
+    console.log('checking win')
     var winnerStates = [
       [1,2,3],
       [4,5,6],
@@ -36,9 +40,14 @@ class Game {
       [1,5,9],
       [3,5,7]
     ]
-    // for (var i = 0; i < winnerStates.length; i++) {
-    // if ((this.moves.includes(winnerStates[i])))
+    for (var i = 0; i < winnerStates.length; i++) {
+    if ((player2.moves.includes(winnerStates[i][0])) &&
+    (player2.moves.includes(winnerStates[i][1])) &&
+    (player2.moves.includes(winnerStates[i][2]))) {
+      console.log('player 1 wins')
     }
+    }
+  }
   //check the array of wins to see if boards matches
   //update DOM to show winner
   //how do i tell if a player has moved and how to represent the move
