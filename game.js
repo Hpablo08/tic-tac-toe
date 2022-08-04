@@ -4,17 +4,8 @@ class Game {
     this.player2 = player2
     this.turn = 1
     this.player1Turn= false
-    this.board = {
-      1: false,
-      2: false,
-      3: false,
-      4: false,
-      5: false,
-      6: false,
-      7: false,
-      8: false,
-      9: false
-    }
+    this.winner = undefined
+    this.board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   }
 
     // board
@@ -30,7 +21,7 @@ class Game {
       console.log('p1')
     } else {
       this.player1Turn = false
-      this.player2
+      //this.player2
       console.log('ptwoooooo')
     }
   }
@@ -45,10 +36,19 @@ class Game {
       [1,5,9],
       [3,5,7]
     ]
+    // for (var i = 0; i < winnerStates.length; i++) {
+    // if ((this.moves.includes(winnerStates[i])))
+    }
   //check the array of wins to see if boards matches
   //update DOM to show winner
   //how do i tell if a player has moved and how to represent the move
+
+resetGame(){
+  this.turn = 1
+  this.player1turn = false
 }
+
+
 }
 //update dom of players move
 
