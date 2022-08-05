@@ -23,7 +23,7 @@ function addPiece(event) {
   if (game.player1Turn === true) {
     event.target.innerText = 'X'
     player1.moves.push(parseInt(event.target.dataset.section))
-    title.innerText= `It's Player 1's move`
+    title.innerText= `It's Player 2's move`
     console.log(player1.moves)
     game.checkWin()
   } else {
@@ -37,15 +37,20 @@ function addPiece(event) {
 }
 
 function playerHasWon() {
-  if (game.winner === true) {
+    game.checkDraw()
+  if (game.winner === 'player1') {
     title.innerText = 'Player 1 Wins!!!'
     playerOneScore.innerText = `${player1.wins}`
     resetGameSpaces()
   }
-  if (game.winner === false) {
+  if (game.winner === 'player2') {
     title.innerText= 'Player 2 Wins!!!'
     playerTwoScore.innerText = `${player2.wins}`
     resetGameSpaces() //reset board
+  }
+  if (game.winner === 'draw'){
+    title.innerText= "It's a Draw! play again?"
+    resetGameSpaces()
   }
 }
 
@@ -54,7 +59,7 @@ function resetGameSpaces() {
     gameSpaces[i].innerText = ''
   }
    game.resetGameBoard() //reset board
-}
+  }
 
 
 //displays playerTurn
