@@ -3,7 +3,8 @@ var gameBoard = document.querySelector('.game-box')
 var playerTurn = document.querySelector('.player-turn')
 var gameSpaces = document.querySelectorAll('td')
 var title = document.querySelector('h1')
-
+var playerOneScore = document.querySelector('.player-one-score')
+var playerTwoScore = document.querySelector('.player-two-score')
 
 //Event listener
 gameBoard.addEventListener('click', addPiece)
@@ -37,10 +38,13 @@ function addPiece(event) {
 
 function playerHasWon() {
   if (game.winner === true) {
-    title.innerText= 'Player 1 Wins!!!'
+    title.innerText = 'Player 1 Wins!!!'
+    playerOneScore.innerText = `${player1.wins}`
+    resetGameSpaces()
   }
   if (game.winner === false) {
     title.innerText= 'Player 2 Wins!!!'
+    playerTwoScore.innerText = `${player2.wins}`
     resetGameSpaces() //reset board
   }
 }
