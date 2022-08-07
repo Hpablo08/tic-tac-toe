@@ -43,6 +43,7 @@ class Game {
         (player1.moves.includes(winnerStates[i][1])) &&
         (player1.moves.includes(winnerStates[i][2]))) {
         player1.wins++
+        player1.saveWinsToStorage()
         this.winner = 'player1'
         console.log(`PLAYER 1 WINS!!!`)
       }
@@ -50,6 +51,7 @@ class Game {
         (player2.moves.includes(winnerStates[i][1])) &&
         (player2.moves.includes(winnerStates[i][2]))) {
         player2.wins++
+        player2.saveWinsToStorage()
         this.winner = 'player2'
         console.log(`PLAYER 2 WINS!!!`)
       }
