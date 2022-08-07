@@ -20,11 +20,15 @@ html, body , .container {
 .left-side-box, .right-side-box{
   display: flex;
   justify-content: space-around;
+  text-align: center;
   height:100%;
   width:30%;
   background-image: linear-gradient(grey, black);
 }
 /*---------Main box--------------*/
+.hidden{
+  display: none;
+}
 .main-box{
   display: flex;
   justify-content: space-around;
