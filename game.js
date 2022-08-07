@@ -43,14 +43,16 @@ class Game {
         (player1.moves.includes(winnerStates[i][1])) &&
         (player1.moves.includes(winnerStates[i][2]))) {
         player1.wins++
-        this.winner = true
+        player1.saveWinsToStorage()
+        this.winner = 'player1'
         console.log(`PLAYER 1 WINS!!!`)
       }
       if ((player2.moves.includes(winnerStates[i][0])) &&
         (player2.moves.includes(winnerStates[i][1])) &&
         (player2.moves.includes(winnerStates[i][2]))) {
         player2.wins++
-        this.winner = false
+        player2.saveWinsToStorage()
+        this.winner = 'player2'
         console.log(`PLAYER 2 WINS!!!`)
       }
     }
@@ -66,8 +68,8 @@ class Game {
     this.winner = undefined
   }
   checkDraw(){
-    if(this.turn = 10){
-      return true
+    if(this.turn === 10){
+      return this.winner = 'draw'
     }
   }
 }

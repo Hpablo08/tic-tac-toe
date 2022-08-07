@@ -5,25 +5,41 @@ var gameSpaces = document.querySelectorAll('td')
 var title = document.querySelector('h1')
 var playerOneScore = document.querySelector('.player-one-score')
 var playerTwoScore = document.querySelector('.player-two-score')
+var notValidSpace = document.querySelector('tbody')
 
 //Event listener
 gameBoard.addEventListener('click', addPiece)
+window.addEventListener('load', scoreKeeper)
 
 //Global Variable
-var player1 = new Player()
-var player2 = new Player()
+var player1 = new Player('player1', 'X')
+var player2 = new Player('player2', 'O')
 var game = new Game(player1, player2)
 
 //Functions
+// function squareAvailability(targetedSpot){
+//   if(targetedSpot === notValidSpace){
+//     alert('Please click a valid spot')
+//     //return true
+//   } else {
+//     addPiece()
+//   }
+//   }
+function scoreKeeper(){
+  player1.retrieveWinsFromStorage()
+  player2.retrieveWinsFromStorage()
+  playerOneScore.innerText = `${player1.wins}`
+  playerTwoScore.innerText = `${player2.wins}`
+}
 
 function addPiece(event) {
-  game.checkMove()
-  console.log(event.target.dataset.section) //checking the value of the section
-  console.log(game.player1Turn)
+    game.checkMove()
+    console.log(event.target.dataset.section) //checking the value of the section
+    console.log(game.player1Turn)
   if (game.player1Turn === true) {
     event.target.innerText = 'X'
     player1.moves.push(parseInt(event.target.dataset.section))
-    title.innerText= `It's Player 1's move`
+    title.innerText= `It's Player 2's move`
     console.log(player1.moves)
     game.checkWin()
   } else {
@@ -36,16 +52,22 @@ function addPiece(event) {
     playerHasWon()
 }
 
+
 function playerHasWon() {
-  if (game.winner === true) {
+    game.checkDraw()
+  if (game.winner === 'player1') {
     title.innerText = 'Player 1 Wins!!!'
     playerOneScore.innerText = `${player1.wins}`
     resetGameSpaces()
   }
-  if (game.winner === false) {
+  if (game.winner === 'player2') {
     title.innerText= 'Player 2 Wins!!!'
     playerTwoScore.innerText = `${player2.wins}`
     resetGameSpaces() //reset board
+  }
+  if (game.winner === 'draw'){
+    title.innerText= "It's a Draw! play again?"
+    resetGameSpaces()
   }
 }
 
@@ -53,8 +75,9 @@ function resetGameSpaces() {
   for (var i = 0; i < gameSpaces.length; i++) {
     gameSpaces[i].innerText = ''
   }
-   game.resetGameBoard() //reset board
-}
+    game.resetGameBoard() //reset board
+  }
+
 
 
 //displays playerTurn
