@@ -78,7 +78,7 @@ function hideBoard() {
   clearButton.classList.add('hidden')
   gameBoard.classList.add('hidden')
   waitImg.classList.remove('hidden')
-  //setTimeout(newGame, 3000)
+  setTimeout(newGame, 3000)
 }
 
 function updateText() {
