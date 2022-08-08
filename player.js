@@ -1,14 +1,14 @@
-class Player{
-  constructor(id, marker){
+class Player {
+  constructor(id, marker) {
     this.id = id
     this.marker = marker
     this.wins = 0
-    this.moves= []
+    this.moves = []
   }
-  saveWinsToStorage(){
+  saveWinsToStorage() {
     localStorage.setItem(`${this.id}`, JSON.stringify(this.wins))
   }
-  retrieveWinsFromStorage(){
+  retrieveWinsFromStorage() {
     var storedWins = JSON.parse(localStorage.getItem(`${this.id}`)) || []
     this.wins = storedWins
   }
