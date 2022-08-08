@@ -37,8 +37,8 @@ function addPiece(event) {
     } else {
       game.board[parseInt(event.target.dataset.section) - 1] = 2
       player2.moves.push(parseInt(event.target.dataset.section))
-      game.checkWin(player2)
       game.changeTurn()
+      game.checkWin(player2)
     }
     playerHasWon()
     updateText()
@@ -61,7 +61,7 @@ function displayPieces() {
     } else if (game.board[i] === 1) {
       gameSpaces[i].innerText = 'X'//`${player1.token}`
     } else if (game.board[i] === 2) {
-      gameSpaces[i].innerHTML = 'O'//`${player2.token}`
+      gameSpaces[i].innerText = 'O'//`${player2.token}`
     }
   }
 }
@@ -91,7 +91,6 @@ function updateText() {
     title.innerText = `It's Player 2's move`
   }
   playerOneScore.innerText = `${player1.wins}`
-
   playerTwoScore.innerText = `${player2.wins}`
 
 }

@@ -30,7 +30,7 @@ class Game {
       if (this.includesSpaces(player, winnerStates, i)) {
         player.wins++
         player.saveWinsToStorage()
-        if (this.player1Turn) {
+        if (!this.player1Turn) {
           this.winner = 'Player 1 Wins!!!'
         } else {
           this.winner = 'Player 2 Wins!!!'
@@ -43,7 +43,7 @@ class Game {
       (player.moves.includes(winnerStates[i][1])) &&
       (player.moves.includes(winnerStates[i][2]))) {
       return true
-      }
+    }
   }
   resetGameState() {
     this.turn = 1
