@@ -43,9 +43,7 @@ class Game {
       (player.moves.includes(winnerStates[i][1])) &&
       (player.moves.includes(winnerStates[i][2]))) {
       return true
-    } else {
-      return false
-    }
+      }
   }
   resetGameState() {
     this.turn = 1
@@ -56,7 +54,7 @@ class Game {
     this.board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
   }
   checkDraw() {
-    if (this.turn === 10 && this.winner === undefined) {
+    if (this.turn === 10 && this.winner === null) {
       return this.winner = "It's a Draw! play again?"
     }
   }
