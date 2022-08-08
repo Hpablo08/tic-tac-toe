@@ -4,6 +4,9 @@
 html, body, .container {
   height: 100%;
   margin: 0;
+  font-family: 'SpongeBob Font Condensed', sans-serif;
+  text-shadow: 0 0 7px #ea9999;
+
 }
 
 .container {
@@ -14,6 +17,7 @@ html, body, .container {
   align-items: center;
   align-content: space-around;
   height: 100%;
+
 }
 
 /*---------Player Boxes---------*/
@@ -23,7 +27,18 @@ html, body, .container {
   text-align: center;
   height: 100%;
   width: 30%;
-  background-image: linear-gradient(grey, black);
+  background-color: #26B9C8;
+  color: #FFF56C;
+  font-size: 20px;
+}
+.left-side-box{
+  background-image: url("assets/spongebob-house.webp");
+}
+
+.right-side-box{
+  background-image: url("assets/patrick-house.jpeg");
+  background-repeat: no-repeat;
+  background-size: 800px 1000px;
 }
 
 /*---------Main box--------------*/
@@ -36,6 +51,21 @@ html, body, .container {
   justify-content: space-around;
   height: 100%;
   width: 60%;
+  background-color: #0457A0;
+  background-image: url("assets/spongebob-sky-background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF56C;
+  font-size: 23px;
+  text-align: center;
+}
+
+tbody{
+  margin-left: 18px;
+}
+
+p {
+  font-size: 35px;
 }
 
 h1 {
@@ -47,10 +77,10 @@ h1 {
 td {
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-color:#fcdd60;
   border: 1px solid white;
-  font-size: 80px;
-  color: #ffffff;
+  font-size: 40px;
+  color: white;
   border-radius: 8px 8px 8px 8px;
   text-align: center;
 }
@@ -58,4 +88,15 @@ td {
 table {
   border margin: 5px auto;
   display: grid;
+}
+
+.clear-memory-button {
+  margin-left: 15px;
+  overflow: hidden;
+  width: 100px;
+  height: 50px;
+  border: 10px solid:#ea9999;
+  cursor: pointer;
+  background-color:#fcdd60;
+  font-family: 'SpongeBob Font Condensed', sans-serif;
 }
