@@ -1,12 +1,8 @@
-/*{
-  border: solid 2px red
-}*/
 html, body, .container {
   height: 100%;
   margin: 0;
   font-family: 'SpongeBob Font Condensed', sans-serif;
   text-shadow: 0 0 7px #ea9999;
-
 }
 
 .container {
@@ -17,7 +13,6 @@ html, body, .container {
   align-items: center;
   align-content: space-around;
   height: 100%;
-
 }
 
 /*---------Player Boxes---------*/
@@ -31,11 +26,12 @@ html, body, .container {
   color: #FFF56C;
   font-size: 20px;
 }
-.left-side-box{
+
+.left-side-box {
   background-image: url("assets/spongebob-house.webp");
 }
 
-.right-side-box{
+.right-side-box {
   background-image: url("assets/patrick-house.jpeg");
   background-repeat: no-repeat;
   background-size: 800px 1000px;
@@ -60,7 +56,7 @@ html, body, .container {
   text-align: center;
 }
 
-tbody{
+tbody {
   margin-left: 18px;
 }
 
@@ -77,7 +73,7 @@ h1 {
 td {
   width: 100px;
   height: 100px;
-  background-color:#fcdd60;
+  background-color: #fcdd60;
   border: 1px solid white;
   font-size: 40px;
   color: white;
@@ -90,6 +86,10 @@ table {
   display: grid;
 }
 
+.wait-image {
+  height: 200px
+}
+
 .clear-memory-button {
   margin-left: 15px;
   overflow: hidden;
@@ -97,6 +97,6 @@ table {
   height: 50px;
   border: 10px solid:#ea9999;
   cursor: pointer;
-  background-color:#fcdd60;
+  background-color: #fcdd60;
   font-family: 'SpongeBob Font Condensed', sans-serif;
 }

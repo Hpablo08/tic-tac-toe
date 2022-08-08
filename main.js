@@ -6,9 +6,12 @@ var title = document.querySelector('h1')
 var playerOneScore = document.querySelector('.player-one-score')
 var playerTwoScore = document.querySelector('.player-two-score')
 var notValidSpace = document.querySelector('tbody')
+var clearButton = document.querySelector('.clear-memory-button')
+var waitImg = document.querySelector('.wait-image' )
 
 //Event listener
 gameBoard.addEventListener('click', addPiece)
+clearButton.addEventListener('click', clearScores)
 window.addEventListener('load', scoreKeeper)
 
 //Global Variable
@@ -56,21 +59,25 @@ function displayPieces() {
     if (game.board[i] === 0) {
       gameSpaces[i].innerText = ''
     } else if (game.board[i] === 1) {
-      gameSpaces[i].innerText = 'X'
+      gameSpaces[i].innerText = 'X'//`${player1.token}`
     } else if (game.board[i] === 2) {
-      gameSpaces[i].innerText = 'O'
+      gameSpaces[i].innerHTML = 'O'//`${player2.token}`
     }
   }
 }
 
 function newGame() {
   gameBoard.classList.remove('hidden')
+  clearButton.classList.remove('hidden')
+  waitImg.classList.add('hidden')
   game.resetGameState()
   updateText()
 }
 
 function hideBoard() {
+  clearButton.classList.add('hidden')
   gameBoard.classList.add('hidden')
+  waitImg.classList.remove('hidden')
   setTimeout(newGame, 3000)
 }
 
@@ -84,5 +91,13 @@ function updateText() {
     title.innerText = `It's Player 2's move`
   }
   playerOneScore.innerText = `${player1.wins}`
+
   playerTwoScore.innerText = `${player2.wins}`
+
+}
+
+
+function clearScores(){
+  window.location.reload()
+  localStorage.clear()
 }
