@@ -21,6 +21,7 @@ This application is a chance for students to build a Tic-Tac-Toe app that allow 
 
 ## Screenshots
 ![ScreeShot](assets/game.png)
+![ScreeShot](assets/example.mov)
 
 ## Features
 - The game keeps tracks of the score and stores the data in local localStorage
