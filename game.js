@@ -47,7 +47,6 @@ class Game {
   }
   resetGameState() {
     this.turn = 1
-    this.player1turn = true
     this.player1.moves = []
     this.player2.moves = []
     this.winner = null

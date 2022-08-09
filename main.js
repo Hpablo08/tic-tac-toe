@@ -92,9 +92,7 @@ function updateText() {
   }
   playerOneScore.innerText = `${player1.wins}`
   playerTwoScore.innerText = `${player2.wins}`
-
 }
-
 
 function clearScores(){
   window.location.reload()
