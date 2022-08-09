@@ -26,7 +26,7 @@ This application is a chance for students to build a Tic-Tac-Toe app that allow 
 
 <p align="center">Functionality</br>
   <img width="460" height="300" src="assets/DesktopViewTour.gif" alt="Gif of application performing various functional actions">
-</p><p align="center"><img width="300" src="assets/example.gif" alt="Additional gif of application performing various functional actions">
+</p><p align="center"><img width="500" src="assets/example.gif" alt="Additional gif of application performing various functional actions">
 </p>
 
 ## Features
