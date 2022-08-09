@@ -20,8 +20,14 @@ This application is a chance for students to build a Tic-Tac-Toe app that allow 
 - Run open index.html in the terminal to interact with the application
 
 ## Screenshots
-![ScreenShot](assets/game.png)
-![ScreenShot](assets/example.mov)
+<p align="center">Example Screenshot</br>
+  <img width="460" height="300" src="assets/game.png" alt="Screenshot of project">
+</p>
+
+<p align="center">Functionality</br>
+  <img width="460" height="300" src="assets/DesktopViewTour.gif" alt="Gif of application performing various functional actions">
+</p><p align="center"><img width="300" src="assets/example.gif" alt="Additional gif of application performing various functional actions">
+</p>
 
 ## Features
 - The game keeps tracks of the score and stores the data in local localStorage
